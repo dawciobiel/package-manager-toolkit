@@ -1,4 +1,3 @@
-```markdown
 # menu-zypper
 
 The `menu-zypper` script is a simple Bash-based menu interface that allows you to perform the most commonly used package management operations on a system using the Zypper package manager.
@@ -7,7 +6,7 @@ The `menu-zypper` script is a simple Bash-based menu interface that allows you t
 
 With this script, you can perform the following operations:
 - **Install a package/packages** – Allows you to install one or more packages on your system.
-- **Remove a package/packages** – Lets you remove a specific package or a list of packages.
+- **Remove a package/packages** – Let you remove a specific package or a list of packages.
 - **Search for a package/packages** – Enables you to search for a specific package in the repositories.
 - **Update a package/packages** – Updates a selected package or a list of packages.
 - **Perform a full system upgrade** – Executes a comprehensive update of the entire operating system.
@@ -74,5 +73,4 @@ This project is available under the **MIT License**. See the `LICENSE` file for 
 
 ## Contributing
 
-If you have ideas for improving this project, feel free to open an issue or submit a pull request. 😊
-```
+If you have ideas for improving this project, please open an issue or submit a pull request. 😊
