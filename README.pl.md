@@ -20,24 +20,31 @@ Za pomocą skryptu można wykonać następujące operacje:
 
 1. Sklonuj repozytorium na swój lokalny komputer:
    ```bash
-   git clone https://github.com/dawciobiel/menu-zypper.git
+   git clone https://github.com/dawciobiel/package-manager-toolkit.git
    ```
 
 2. Przejdź do katalogu projektu:
    ```bash
-   cd menu-zypper
+   cd package-manager-toolkit/scripts/zypper
    ```
 
 3. Nadaj skryptowi uprawnienia do wykonywania:
    ```bash
-   chmod +x menu-zypper.sh
+   chmod +x colors
+   chmod +x install.cmd
+   chmod +x remove.cmd
+   chmod +x search.cmd
+   chmod +x system-upgrade.cmd
+   chmod +x udpate.cmd
+
+   chmod +x menu-zypper
    ```
 
 ## Użycie
 
 Aby uruchomić skrypt, użyj polecenia:
 ```bash
-./menu-zypper.sh
+   ./menu-zypper
 ```
 
 Po uruchomieniu skryptu wyświetli się menu z opcjami. Wybierz odpowiednią operację, wpisując jej numer i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie.
@@ -47,7 +54,7 @@ Po uruchomieniu skryptu wyświetli się menu z opcjami. Wybierz odpowiednią ope
 ### Instalacja pakietu:
 1. Uruchom skrypt:
    ```bash
-   ./menu-zypper.sh
+   ./menu-zypper
    ```
 2. Wybierz opcję instalacji pakietów.
 3. Podaj nazwę pakietu, który chcesz zainstalować, np. `vim`.
@@ -55,7 +62,7 @@ Po uruchomieniu skryptu wyświetli się menu z opcjami. Wybierz odpowiednią ope
 ### Pełna aktualizacja systemu:
 1. Uruchom skrypt:
    ```bash
-   ./menu-zypper.sh
+   ./menu-zypper
    ```
 2. Wybierz opcję pełnej aktualizacji systemu.
 

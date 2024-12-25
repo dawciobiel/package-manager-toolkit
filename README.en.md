@@ -20,24 +20,31 @@ With this script, you can perform the following operations:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/dawciobiel/menu-zypper.git
+   git clone https://github.com/dawciobiel/package-manager-toolkit.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd menu-zypper
+   cd package-manager-toolkit/scripts/zypper
    ```
 
 3. Make the script executable:
    ```bash
-   chmod +x menu-zypper.sh
+   chmod +x colors
+   chmod +x install.cmd
+   chmod +x remove.cmd
+   chmod +x search.cmd
+   chmod +x system-upgrade.cmd
+   chmod +x udpate.cmd
+
+   chmod +x menu-zypper
    ```
 
 ## Usage
 
 To run the script, use the following command:
 ```bash
-./menu-zypper.sh
+./menu-zypper
 ```
 
 After running the script, a menu with options will be displayed. Enter the desired operation's number and follow the instructions displayed on the screen.
@@ -47,7 +54,7 @@ After running the script, a menu with options will be displayed. Enter the desir
 ### Installing a package:
 1. Run the script:
    ```bash
-   ./menu-zypper.sh
+   ./menu-zypper
    ```
 2. Select the option to install packages.
 3. Enter the name of the package you want to install, e.g., `vim`.
@@ -55,7 +62,7 @@ After running the script, a menu with options will be displayed. Enter the desir
 ### Performing a full system upgrade:
 1. Run the script:
    ```bash
-   ./menu-zypper.sh
+   ./menu-zypper
    ```
 2. Select the option for a full system upgrade.
 
