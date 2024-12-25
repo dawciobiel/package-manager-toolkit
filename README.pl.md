@@ -1,4 +1,3 @@
-```markdown
 # menu-zypper
 
 Skrypt `menu-zypper` to prosty interfejs menu oparty na Bashu, umożliwiający wykonywanie najczęściej używanych operacji związanych z zarządzaniem pakietami w systemie przy użyciu menedżera pakietów Zypper.
@@ -75,6 +74,3 @@ Ten projekt jest dostępny na licencji **MIT**. Szczegóły licencji znajdziesz 
 ## Wkład w rozwój
 
 Jeśli masz pomysły na ulepszenie tego projektu, otwórz zgłoszenie (`issue`) lub prześlij swój wkład w postaci żądania ściągnięcia (`pull request`). 😊
-```
-
----
