@@ -1,5 +1,3 @@
-Oto przykładowa zawartość pliku `README.md` dla Twojego projektu:
-
 ```markdown
 # menu-zypper
 

@@ -1,5 +1,3 @@
-Oto angielska wersja pliku `README.md`:
-
 ```markdown
 # menu-zypper
 
