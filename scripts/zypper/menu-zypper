@@ -12,13 +12,13 @@
 #        ./menu-zypper
 # ===================================================
 
-# Source the colors file
-source ./colors
-
 # Const
 SCRIPT_EXT=".cmd"
 SCRIPT_LABEL_LINE=4
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# Source the colors file
+source "$SCRIPT_DIR"/colors
 # Initialize a counter for the list
 counter=1
 
@@ -39,15 +39,19 @@ ${NC}${YELLOW}
 ${NC}"
 
 # Loop through all SCRIPT_EXT files in the current directory
-for file in *$SCRIPT_EXT; do
+for file in "$SCRIPT_DIR"/*"$SCRIPT_EXT"; do
   # Ensure the file exists (in case no files match the pattern)
   if [[ -f "$file" ]]; then
+
     # Read the label line of the file
     label_line=$(sed -n "${SCRIPT_LABEL_LINE}p" "$file" | sed 's/^# //')
+
     # Print the label line with a numbered list
     echo "$counter. $label_line"
+
     # Add the file to the array
     files+=("$file")
+
     # Increment the counter
     ((counter++))
   fi
@@ -55,7 +59,8 @@ done
 
 # Check if no files were found
 if [[ ${#files[@]} -eq 0 ]]; then
-  echo "No $SCRIPT_EXT files found in the current directory."
+  echo -e "${RED}No${NC} $SCRIPT_EXT ${RED}files found in the current directory.${NC}"
+  echo -e "${RED}Current directory:${NC} $SCRIPT_DIR"
   exit 1
 fi
 
@@ -64,7 +69,7 @@ echo
 
 # Prompt the user for input
 echo -n "Enter the number of the file you want to execute: "
-read choice
+read -r choice
 
 # Validate the user input
 if [[ $choice =~ ^[0-9]+$ ]] && ((choice > 0 && choice <= ${#files[@]})); then
@@ -73,7 +78,7 @@ if [[ $choice =~ ^[0-9]+$ ]] && ((choice > 0 && choice <= ${#files[@]})); then
   # Execute the selected file
   bash "$selected_file"
 else
-  echo "Invalid choice. Exiting."
+  echo -e "${RED}Invalid choice. Exiting.${NC}"
   exit 1
 fi
 
