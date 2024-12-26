@@ -25,8 +25,18 @@ counter=1
 # Create an array to store the file paths
 declare -a files
 
-# Echo empty line
-echo -e "\n"
+echo -e "${GREEN}
+                .--.             
+               |o_o |            
+               |:_/ |            
+              //   \\ \\           
+             (|     | )          
+            /'\\_   _/'\\          
+            \\___)=(___/
+${NC}${YELLOW}
+      Zypper Manager Toolkit
+    Manage packages with style!
+${NC}"
 
 # Loop through all SCRIPT_EXT files in the current directory
 for file in *$SCRIPT_EXT; do
