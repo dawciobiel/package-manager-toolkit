@@ -24,21 +24,11 @@ source "$SCRIPT_DIR"/colors
 # Initialize a counter for the list
 counter=1
 
+# Show banner
+bash "$SCRIPT_DIR"/banner
+
 # Create an array to store the file paths
 declare -a files
-
-echo -e "${GREEN}
-                .--.             
-               |o_o |            
-               |:_/ |            
-              //   \\ \\           
-             (|     | )          
-            /'\\_   _/'\\          
-            \\___)=(___/
-${NC}${YELLOW}
-      Zypper Manager Toolkit
-    Manage packages with style!
-${NC}"
 
 # Loop through all SCRIPT_EXT files in the current directory
 for file in "$SCRIPT_DIR"/*"$SCRIPT_EXT"; do

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# ===================================================
+# Script Name: banner
+# Author: Dawid Bielecki - dawciobiel
+# Date: 2024-12-25
+# Version: 1.0
+# Description: Bash script used to print banner of
+#              Zypper Package Manage.
+# Usage:
+#        ./banner
+# ===================================================
+
+# Source the colors file
+source "$SCRIPT_DIR"/colors
+
+echo -e "${GREEN}
+                .--.
+               |o_o |
+               |:_/ |
+              //   \\ \\
+             (|     | )
+            /'\\_   _/'\\
+            \\___)=(___/
+${NC}${YELLOW}
+      Zypper Manager Toolkit
+    Manage packages with style!
+${NC}"
