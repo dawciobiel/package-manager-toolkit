@@ -16,6 +16,9 @@
 #        or ./search.cmd
 # ===================================================
 
+# Const
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # Source the colors file
 source "$SCRIPT_DIR"/colors
 
