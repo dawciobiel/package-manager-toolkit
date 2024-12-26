@@ -16,7 +16,7 @@
 # ===================================================
 
 # Source the colors file
-source ./colors
+source "$SCRIPT_DIR"/colors
 
 # Refreshing information about packet repositories
 echo

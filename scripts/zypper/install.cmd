@@ -17,7 +17,7 @@
 # ===================================================
 
 # Source the colors file
-source ./colors
+source "$SCRIPT_DIR"/colors
 
 # Get the package\packages name from user
 echo -e "${GREEN}Podaj nazwę pakietu do zainstalowania: ${NC}"

@@ -17,7 +17,7 @@
 # ===================================================
 
 # Source the colors file
-source ./colors
+source "$SCRIPT_DIR"/colors
 
 # Get the package\packages name from user
 echo -e "${GREEN}Podaj nazwę szukanego pakietu lub pakietów: ${NC}"
@@ -37,7 +37,7 @@ sudo zypper search "$package"
 # Check result of searching operation
 if [[ $? -eq 0 ]]; then
   echo
-  echo -e "\n${GREEN}Pakiet${NC} $package ${GREEN}został pomyślnie znaleziony.${NC}\n"
+  echo -e "\n${GREEN}Pomyślnie znaleziono pakiet:{NC} $package ${GREEN}.${NC}\n"
 else
   echo
   echo -e "\n${RED}Wystąpił błąd podczas szukania pakietu${NC} $package.\n"

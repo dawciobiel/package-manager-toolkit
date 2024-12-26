@@ -16,9 +16,11 @@
 SCRIPT_EXT=".cmd"
 SCRIPT_LABEL_LINE=4
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+export SCRIPT_DIR
 
 # Source the colors file
 source "$SCRIPT_DIR"/colors
+
 # Initialize a counter for the list
 counter=1
 
