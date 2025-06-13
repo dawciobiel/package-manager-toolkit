@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Label
+# Install package into system
+
+# ===================================================
+# Script Name: install.cmd
+# Author: Dawid Bielecki - dawciobiel
+# Date: 2024-12-25
+# Version: 1.1
+# Description: Bash script used for installing
+#              a package/packages using
+#              Zypper Package Manager.
+# Usage:
+#        ./menu-zypper
+#        or ./install.cmd
+# ===================================================
+
+# Const
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "$SCRIPT_DIR"/install.cmd
+
+# Source the colors file
+source "$SCRIPT_DIR"/colors
+
+# Get the package name from user
+echo -e "${GREEN}Podaj nazwę pakietu do zainstalowania: ${NC}"
+read -r PACKAGES_NAME
+
+# Check is that name correct
+if [[ -z "$PACKAGES_NAME" ]]; then
+  echo -e "\n${RED}Nie podano nazwy pakietu. Anulowano.${NC}"
+  exit 1
+fi
+
+# Execute the command
+echo -e "\n${YELLOW}Instalacja pakietu: ${NC}$PACKAGES_NAME\n"
+eval "$CMD_INSTALL"
+
+# Check result of operation
+if [[ $? -eq 0 ]]; then
+  echo -e "\n${GREEN}Pakiet${NC} $PACKAGES_NAME ${GREEN}został pomyślnie zainstalowany.${NC}\n"
+else
+  echo -e "\n${RED}Wystąpił błąd podczas instalacji pakietu${NC} $PACKAGES_NAME.\n"
+fi
